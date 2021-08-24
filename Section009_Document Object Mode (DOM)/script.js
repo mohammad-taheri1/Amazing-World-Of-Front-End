@@ -118,17 +118,55 @@
 
 // Keyboard events
 
-document.body.addEventListener('keydown',(e) => {
-    console.log('keydown for => ' +e.keyCode)
+// document.body.addEventListener('keydown',(e) => {
+//     console.log('keydown for => ' +e.keyCode)
     
+// })
+
+// document.body.addEventListener('keyup',(e) => {
+//     console.log('keyup for => ' +e.keyCode)
+    
+// })
+
+// document.body.addEventListener('keypress',(e) => {
+//     console.log('keypress for => ' +e.keyCode)
+    
+// })
+
+
+// Mouse events
+
+const btn = document.querySelector('#submitBtn')
+
+// btn.addEventListener('mousedown', () => {
+//     console.log('Mouse Down')
+// })
+
+// btn.addEventListener('mouseup', () => {
+//     console.log('Mouse Up')
+// })
+
+// btn.addEventListener('click', () => {
+//     console.log('Mouse Click')
+// })
+
+// btn.addEventListener('dblclick', () => {
+//     console.log('Mouse Double Click')
+// })
+
+btn.addEventListener('mouseover', () => {
+    console.log('Mouse mouseover')
 })
 
-document.body.addEventListener('keyup',(e) => {
-    console.log('keyup for => ' +e.keyCode)
-
+let count = 0
+btn.addEventListener('mouseenter', () => {
+    console.log('Mouse mouseenter')
+    count++
+    btn.innerHTML = count
 })
 
-document.body.addEventListener('keypress',(e) => {
-    console.log('keypress for => ' +e.keyCode)
-
+btn.addEventListener('mousemove', () => {
+    console.log(Date.now())
+    count++
+    btn.innerHTML = count
 })
