@@ -1,16 +1,15 @@
 //  const btns = document.querySelectorAll('.btn')
 
 //  btns.forEach((btn) => {
-     
-//     btn.style.background = 'red' 
-//     setInterval(() => { 
-//        btn.style.background = (btn.style.background == 'red') ? 'blue' : 'red' 
-//     }, Math.random()*3000) 
+
+//     btn.style.background = 'red'
+//     setInterval(() => {
+//        btn.style.background = (btn.style.background == 'red') ? 'blue' : 'red'
+//     }, Math.random()*3000)
 
 //  })
 
 // *****************************************************************************
-
 
 // const titr = document.querySelector('#h')
 
@@ -20,7 +19,7 @@
 // console.log(titr.style.background)
 
 // const interval = setInterval(() => {
-    
+
 //     if(titr.style.fontSize < '60px') {
 //         // console.log(titr.style.fontSize)
 //         let size = String(titr.style.fontSize).split('px')
@@ -29,9 +28,8 @@
 //         console.log(finalsize)
 //         titr.style.fontSize = finalsize + 'px'
 //     }
-    
-// }, 1000)
 
+// }, 1000)
 
 // *****************************************************************************
 
@@ -53,17 +51,17 @@
 
 // *****************************************************************************
 
-const titr = document.querySelector('#h')
+// const titr = document.querySelector('#h')
 
 // console.log(titr.style)
 
 // titr.style.fontSize = '3rem'
-titr.style.border = '5px solid red '
+// titr.style.border = '5px solid red '
 
 // console.log(window.getComputedStyle(titr).fontSize)
 
-const btnadd = document.querySelector('.btnadd')
-const btnsub = document.querySelector('.btnsub')
+// const btnadd = document.querySelector('.btnadd')
+// const btnsub = document.querySelector('.btnsub')
 
 // console.log(typeof(window.getComputedStyle(titr).fontSize))
 
@@ -73,22 +71,47 @@ const btnsub = document.querySelector('.btnsub')
 // currentSize = parseInt(currentSize.substr(0, currentSize.length - 2))
 // console.log(currentSize )
 
-btnadd.addEventListener('click', () => {
-    //
-    let currentSize = window.getComputedStyle(titr).fontSize
-    currentSize = parseInt(currentSize.substr(0, currentSize.length - 2))
-    console.log(currentSize )
-    titr.style.fontSize = currentSize + 1 + 'px'
+// btnadd.addEventListener('click', () => {
+//     //
+//     let currentSize = window.getComputedStyle(titr).fontSize
+//     currentSize = parseInt(currentSize.substr(0, currentSize.length - 2))
+//     console.log(currentSize )
+//     titr.style.fontSize = currentSize + 1 + 'px'
+// })
+
+// btnsub.addEventListener('click', () => {
+//     //
+//     let currentSize = window.getComputedStyle(titr).fontSize
+//     currentSize = parseInt(currentSize.substr(0, currentSize.length - 2))
+//     console.log(currentSize )
+//     titr.style.fontSize = currentSize - 1 + 'px'
+// })
+
+// *****************************************************************************
+
+// Form
+
+const username = document.querySelector('#username')
+const password = document.querySelector('#password')
+const submitBtn = document.querySelector('#submitBtn')
+
+username.addEventListener('change',() => {
+    console.log('change event')
 })
 
-btnsub.addEventListener('click', () => {
-    //
-    let currentSize = window.getComputedStyle(titr).fontSize
-    currentSize = parseInt(currentSize.substr(0, currentSize.length - 2))
-    console.log(currentSize )
-    titr.style.fontSize = currentSize - 1 + 'px'
+username.addEventListener('input',() => {
+    console.log('input event')
 })
 
+username.addEventListener('focus',() => {
+    console.log('focus event')
+})
 
+username.addEventListener('blur',() => {
+    console.log('blur event')
+})
 
-
+submitBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log(Date.now()+ String(Math.ceil(Math.random()*1000000000000000000)))
+})
