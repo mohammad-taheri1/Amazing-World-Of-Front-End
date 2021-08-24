@@ -120,23 +120,22 @@
 
 // document.body.addEventListener('keydown',(e) => {
 //     console.log('keydown for => ' +e.keyCode)
-    
+
 // })
 
 // document.body.addEventListener('keyup',(e) => {
 //     console.log('keyup for => ' +e.keyCode)
-    
+
 // })
 
 // document.body.addEventListener('keypress',(e) => {
 //     console.log('keypress for => ' +e.keyCode)
-    
-// })
 
+// })
 
 // Mouse events
 
-const btn = document.querySelector('#submitBtn')
+// const btn = document.querySelector('#submitBtn')
 
 // btn.addEventListener('mousedown', () => {
 //     console.log('Mouse Down')
@@ -154,19 +153,63 @@ const btn = document.querySelector('#submitBtn')
 //     console.log('Mouse Double Click')
 // })
 
-btn.addEventListener('mouseover', () => {
-    console.log('Mouse mouseover')
-})
+// btn.addEventListener('mouseover', () => {
+//     console.log('Mouse mouseover')
+// })
 
-let count = 0
-btn.addEventListener('mouseenter', () => {
-    console.log('Mouse mouseenter')
-    count++
-    btn.innerHTML = count
-})
+// let count = 0
+// btn.addEventListener('mouseenter', () => {
+//     console.log('Mouse mouseenter')
+//     count++
+//     btn.innerHTML = count
+// })
 
-btn.addEventListener('mousemove', () => {
-    console.log(Date.now())
-    count++
-    btn.innerHTML = count
-})
+// btn.addEventListener('mousemove', () => {
+//     console.log(Date.now())
+//     count++
+//     btn.innerHTML = count
+// })
+
+// Create Html elements
+
+const btnAdd = document.querySelector("#add-item");
+const firstItem = document.querySelector("#item1");
+const list = document.querySelector("#todo-list");
+const inputBox = document.querySelector("#todo-input");
+
+let currentInputValue = "";
+
+inputBox.addEventListener("input", (e) => {
+  currentInputValue = e.target.value;
+  // console.log(currentInputValue)
+});
+
+inputBox.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    addListItem();
+  }
+});
+
+btnAdd.addEventListener("click", addListItem);
+
+function addListItem() {
+  if (
+    currentInputValue !== undefined &&
+    currentInputValue !== null &&
+    currentInputValue !== ""
+  ) {
+    const newListElement = document.createElement("li");
+    newListElement.appendChild(document.createTextNode(currentInputValue));
+    newListElement.id = "item" + (list.childElementCount + 1);
+
+    // const firstElement = list.firstElementChild
+    // list.insertBefore(newListElement, firstElement)
+
+    list.appendChild(newListElement);
+
+    inputBox.value = "";
+    currentInputValue = "";
+  } else {
+    alert(" Please enter something...");
+  }
+}
