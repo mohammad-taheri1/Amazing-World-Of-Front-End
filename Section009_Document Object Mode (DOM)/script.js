@@ -35,19 +35,60 @@
 
 // *****************************************************************************
 
-const btns = document.querySelectorAll('.btn')
+// const btns = document.querySelectorAll('.btn')
+// const titr = document.querySelector('#h')
+
+// btns.forEach(element => {
+//     element.addEventListener('mouseover',() => {
+//         // element.style.background = (element.style.background == 'red') ? 'blue' :  'red'
+//         // element.style.background = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`
+//         titr.innerHTML =   element.innerHTML
+//         // titr.style.background =    element.style.background
+//         element.classList.add('blue')
+//     })
+//     element.addEventListener('click',() => {
+//         element.classList.remove('blue')
+//     })
+// });
+
+// *****************************************************************************
+
 const titr = document.querySelector('#h')
 
-btns.forEach(element => {
-    element.addEventListener('mouseover',() => {
-        // element.style.background = (element.style.background == 'red') ? 'blue' :  'red'
-        // element.style.background = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`
-        titr.innerHTML =   element.innerHTML
-        // titr.style.background =    element.style.background
-        element.classList.add('blue')
-    })
-    element.addEventListener('click',() => {
-        element.classList.remove('blue')
-    })
-});
+// console.log(titr.style)
+
+// titr.style.fontSize = '3rem'
+titr.style.border = '5px solid red '
+
+// console.log(window.getComputedStyle(titr).fontSize)
+
+const btnadd = document.querySelector('.btnadd')
+const btnsub = document.querySelector('.btnsub')
+
+// console.log(typeof(window.getComputedStyle(titr).fontSize))
+
+// let currentSize = window.getComputedStyle(titr).fontSize
+// console.log(currentSize)
+
+// currentSize = parseInt(currentSize.substr(0, currentSize.length - 2))
+// console.log(currentSize )
+
+btnadd.addEventListener('click', () => {
+    //
+    let currentSize = window.getComputedStyle(titr).fontSize
+    currentSize = parseInt(currentSize.substr(0, currentSize.length - 2))
+    console.log(currentSize )
+    titr.style.fontSize = currentSize + 1 + 'px'
+})
+
+btnsub.addEventListener('click', () => {
+    //
+    let currentSize = window.getComputedStyle(titr).fontSize
+    currentSize = parseInt(currentSize.substr(0, currentSize.length - 2))
+    console.log(currentSize )
+    titr.style.fontSize = currentSize - 1 + 'px'
+})
+
+
+
 
