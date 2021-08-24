@@ -91,27 +91,44 @@
 
 // Form
 
-const username = document.querySelector('#username')
-const password = document.querySelector('#password')
-const submitBtn = document.querySelector('#submitBtn')
+// const username = document.querySelector('#username')
+// const password = document.querySelector('#password')
+// const submitBtn = document.querySelector('#submitBtn')
 
-username.addEventListener('change',() => {
-    console.log('change event')
+// username.addEventListener('change',() => {
+//     console.log('change event')
+// })
+
+// username.addEventListener('input',() => {
+//     console.log('input event')
+// })
+
+// username.addEventListener('focus',() => {
+//     console.log('focus event')
+// })
+
+// username.addEventListener('blur',() => {
+//     console.log('blur event')
+// })
+
+// submitBtn.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     console.log(Date.now()+ String(Math.ceil(Math.random()*1000000000000000000)))
+// })
+
+// Keyboard events
+
+document.body.addEventListener('keydown',(e) => {
+    console.log('keydown for => ' +e.keyCode)
+    
 })
 
-username.addEventListener('input',() => {
-    console.log('input event')
+document.body.addEventListener('keyup',(e) => {
+    console.log('keyup for => ' +e.keyCode)
+
 })
 
-username.addEventListener('focus',() => {
-    console.log('focus event')
-})
+document.body.addEventListener('keypress',(e) => {
+    console.log('keypress for => ' +e.keyCode)
 
-username.addEventListener('blur',() => {
-    console.log('blur event')
-})
-
-submitBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    console.log(Date.now()+ String(Math.ceil(Math.random()*1000000000000000000)))
 })
