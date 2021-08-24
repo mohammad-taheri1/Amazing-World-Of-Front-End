@@ -170,12 +170,14 @@
 //     btn.innerHTML = count
 // })
 
-// Create Html elements
+// Create && Update && Delete Html elements
 
 const btnAdd = document.querySelector("#add-item");
 const firstItem = document.querySelector("#item1");
 const list = document.querySelector("#todo-list");
 const inputBox = document.querySelector("#todo-input");
+const btnUpdate = document.querySelector("#update-item");
+const btnRemove = document.querySelector("#remove-item");
 
 let currentInputValue = "";
 
@@ -190,7 +192,13 @@ inputBox.addEventListener("keyup", (e) => {
   }
 });
 
-btnAdd.addEventListener("click", addListItem);
+function createNewNode() {
+  const newListElement = document.createElement("li");
+  newListElement.appendChild(document.createTextNode(currentInputValue));
+  newListElement.id = "item" + (list.childElementCount + 1);
+
+  return newListElement;
+}
 
 function addListItem() {
   if (
@@ -198,9 +206,7 @@ function addListItem() {
     currentInputValue !== null &&
     currentInputValue !== ""
   ) {
-    const newListElement = document.createElement("li");
-    newListElement.appendChild(document.createTextNode(currentInputValue));
-    newListElement.id = "item" + (list.childElementCount + 1);
+    const newListElement = createNewNode();
 
     // const firstElement = list.firstElementChild
     // list.insertBefore(newListElement, firstElement)
@@ -213,3 +219,18 @@ function addListItem() {
     alert(" Please enter something...");
   }
 }
+
+btnAdd.addEventListener("click", addListItem);
+
+btnUpdate.addEventListener("click", () => {
+  const firstElement = list.firstElementChild;
+  const newListElement = createNewNode();
+
+  list.replaceChild(newListElement, firstElement)
+});
+
+btnRemove.addEventListener('click',() => {
+    const firstElement = list.firstElementChild;
+
+    list.removeChild(firstElement)
+})
