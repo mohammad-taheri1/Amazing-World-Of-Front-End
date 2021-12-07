@@ -2,7 +2,7 @@ function createCircle(radius){
     return {
         radius,
         move(){
-            console.log("move function");
+            console.log(`move function for radius ${radius}`);
         }
     }
 }
