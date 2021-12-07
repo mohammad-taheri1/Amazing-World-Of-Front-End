@@ -7,3 +7,4 @@ function Circle(radius) {
 }
 
 const circle1 = new Circle(18);
+const circle2 = new Circle(6);
