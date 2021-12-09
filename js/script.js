@@ -7,3 +7,49 @@ function talk(){
 const run = function (){
     console.log("salam mamad");
 }
+
+// arguments, rest operator
+
+// function sum(...rest){
+//     const total = 0;
+//     return rest.reduce((acc, current) => {
+//         return acc + current;
+//     }, 0)
+// }
+//
+// console.log(sum(3, 4, 8, 12));
+
+// ****************************************************
+
+// getter && setter
+
+const person = {
+    name: "mamad",
+    lastName: "taheri",
+    get fullName(){
+        console.log(`${this.name} ${this.lastName}`);
+    },
+    set fullName(value) {
+        const pieces = value.split(" ");
+        this.name = pieces[0];
+        this.lastName = pieces[1];
+    }
+}
+
+person.fullName = "Ali dfasdgs"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
