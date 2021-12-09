@@ -23,6 +23,25 @@ const run = function (){
 
 // getter && setter
 
+// const person = {
+//     name: "mamad",
+//     lastName: "taheri",
+//     get fullName(){
+//         console.log(`${this.name} ${this.lastName}`);
+//     },
+//     set fullName(value) {
+//         const pieces = value.split(" ");
+//         this.name = pieces[0];
+//         this.lastName = pieces[1];
+//     }
+// }
+//
+// person.fullName = "Ali dfasdgs"
+
+// ****************************************************
+
+// try && Catch
+
 const person = {
     name: "mamad",
     lastName: "taheri",
@@ -30,15 +49,19 @@ const person = {
         console.log(`${this.name} ${this.lastName}`);
     },
     set fullName(value) {
+        if(typeof value !== "string")
+           throw new Error("wrong type");
         const pieces = value.split(" ");
         this.name = pieces[0];
         this.lastName = pieces[1];
     }
 }
 
-person.fullName = "Ali dfasdgs"
-
-
+try {
+    person.fullName = true;
+} catch (error){
+    console.log(error);
+}
 
 
 
