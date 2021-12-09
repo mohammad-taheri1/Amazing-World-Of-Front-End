@@ -43,11 +43,18 @@
 
 // const newMessage = message.split(" ").join("-");
 
-const numbers = [3, 15, 6, -1, 15, 6];
+const numbers = [-3, 15, 6, -1, 15, 6];
 
-const checkEvery = numbers.every(q => {
+// const checkEvery = numbers.every(q => {
+//     console.log(q ,  q>0);
+//     return q>0;
+// });
+//
+// console.log(checkEvery)
+
+const checkSome = numbers.some(q => {
     console.log(q ,  q>0);
     return q>0;
 });
 
-console.log(checkEvery)
+console.log(checkSome)
