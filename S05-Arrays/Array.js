@@ -43,7 +43,7 @@
 
 // const newMessage = message.split(" ").join("-");
 
-const numbers = [-3, 15, 6, -1, 15, 6];
+// const numbers = [-3, 15, 6, -1, 15, 6];
 
 // const checkEvery = numbers.every(q => {
 //     console.log(q ,  q>0);
@@ -59,4 +59,35 @@ const numbers = [-3, 15, 6, -1, 15, 6];
 
 // console.log(checkSome);
 
-numbers.forEach((value, i) => console.log(value , " => ", i) );
+// numbers.forEach((value, i) => console.log(value , " => ", i) );
+
+// console.log(numbers.filter(q => q>0))
+
+// const users = [
+//     { id: 1, name: "mamad", family: "taheri", symbol: "شتران" },
+//     { id: 2, name: "ali", family: "alavi", symbol: "شبریز" },
+//     { id: 3, name: "javad", family: "javadi", symbol: "وبملت" },
+//     { id: 4, name: "sanam", family: "sanami", symbol: "کنور" },
+//     { id: 5, name: "maral", family: "marali", symbol: "تملت" },
+// ];
+//
+// const filteredArray = users.filter(item => item.symbol.includes("ت"));
+//
+// console.log(filteredArray.length + " of " + users.length);
+// console.log(filteredArray);
+
+// const asfdkljiosg = users.map(item => {
+//     return {
+//         ...item,
+//         fullName: item.name + " " + item.family
+//     }
+// });
+//
+// console.log(asfdkljiosg)
+
+const numbers = [2, 4, 3, 8, 1, 5];
+
+const sum = numbers.reduce((prev, item) => {
+    return prev + item
+}, 0);
+console.log(sum)
