@@ -52,9 +52,11 @@ const numbers = [-3, 15, 6, -1, 15, 6];
 //
 // console.log(checkEvery)
 
-const checkSome = numbers.some(q => {
-    console.log(q ,  q>0);
-    return q>0;
-});
+// const checkSome = numbers.some(q => {
+//     console.log(q ,  q>0);
+//     return q>0;
+// });
 
-console.log(checkSome)
+// console.log(checkSome);
+
+numbers.forEach((value, i) => console.log(value , " => ", i) );
