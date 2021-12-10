@@ -1,17 +1,19 @@
-const showbtn = document.querySelector(".show-modal");
-const modal = document.querySelector(".modal");
-const backDrop = document.querySelector(".backdrop");
-const closebtn = document.querySelector(".close-modal");
+class Animal{
+    constructor(_name) {
+        this.name = _name;
+    }
+    eats(){
+        console.log(`the ${this.name} eats food`);
+    }
+}
 
-showbtn.addEventListener("click",()=>{
-    modal.style.opacity = "1";
-    modal.style.transform = "translateY(20vh)"
-    backDrop.style.display = "block";
-})
+class Dog extends Animal{
+    eats() {
+        super.eats();
+        console.log(`overrided function`);
+    }
 
-closebtn.addEventListener("click",()=>{
-    modal.style.opacity = "0";
-    modal.style.transform = "translateY(-100vh)"
-    backDrop.style.display = "none";
-})
+}
 
+const animal1 = new Dog('animaltest');
+animal1.eats();
