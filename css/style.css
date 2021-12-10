@@ -15,3 +15,88 @@
     --mainRed: #db2777;
     --bodyColor: #f6f6f6;
 }
+
+body {
+    font-family: Tahoma, sans-serif;
+    color: var(--mainBlack);
+    background-color: var(--bodyColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-container {
+    display: flex;
+}
+
+.todo-container{
+    width: 20rem;
+}
+form {
+    width: 20rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+form input {
+    flex: 1;
+}
+
+form input, form button {
+    border: none;
+    outline: none;
+    background-color: var(--mainWhite);
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+form button {
+    color: var(--primaryColor);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+}
+.todo {
+    background-color: var(--secondaryColor);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin: 0.3rem 0;
+}
+.todo li {
+    flex: 1;
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+
+.todo span {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.fa-trash {
+    color: var(--mainRed);
+}
+.fa-check-circle-o {
+    color: var(--primaryColor);
+}
