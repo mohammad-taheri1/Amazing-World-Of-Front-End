@@ -1,78 +1,30 @@
-// function decleration
-// function talk(){
-//     console.log("salam mamad");
-// }
+const searchInput = document.querySelector("#search");
 
-// function expression
-// const run = function (){
-//     console.log("salam mamad");
-// }
+const products = [
+    {id: 1, title: "new producsf sgsg dsgasdgds fgdsfG"},
+    {id: 2, title: "SADFJK SDAGNDSJ WEP 5DGSA"},
+    {id: 3, title: "DDSFA EEW FHS SFGAS "},
+    {id: 4, title: "ASDF RGRL  'RTOPJRWOIGERWO"},
+    {id: 5, title: "DFAS L;GIO JRNGUPOAS"},
+    {id: 6, title: "LOIEWUB IWRHGUISDLV;"},
+    {id: 7, title: "DSALKFJB OIWRGIB./ KLRGNU KJAFNUODVI "},
+    {id: 8, title: "LSJDF URGUIRG URGPFO OEWIIFH; UD GF"},
+    {id: 9, title: "DSLKF KEWGFOI UIREGUI OF;DVDS5"},
+    {id: 10, title: "DS DVC FE FIOOI RJGNRUI "},
+];
 
-// arguments, rest operator
-
-// function sum(...rest){
-//     const total = 0;
-//     return rest.reduce((acc, current) => {
-//         return acc + current;
-//     }, 0)
-// }
-//
-// console.log(sum(3, 4, 8, 12));
-
-// ****************************************************
-
-// getter && setter
-
-// const person = {
-//     name: "mamad",
-//     lastName: "taheri",
-//     get fullName(){
-//         console.log(`${this.name} ${this.lastName}`);
-//     },
-//     set fullName(value) {
-//         const pieces = value.split(" ");
-//         this.name = pieces[0];
-//         this.lastName = pieces[1];
-//     }
-// }
-//
-// person.fullName = "Ali dfasdgs"
-
-// ****************************************************
-
-// try && Catch
-
-const person = {
-    name: "mamad",
-    lastName: "taheri",
-    get fullName(){
-        console.log(`${this.name} ${this.lastName}`);
-    },
-    set fullName(value) {
-        if(typeof value !== "string")
-           throw new Error("wrong type");
-        const pieces = value.split(" ");
-        this.name = pieces[0];
-        this.lastName = pieces[1];
-    }
+const filterString={
+    searchItem : '',
 }
 
-try {
-    person.fullName = true;
-} catch (error){
-    console.log(error);
+function renderProducts(products, filterString){
+    const result = products.filter(q => q.title.toLowerCase().includes(filterString.searchItem.toLowerCase()));
+    console.log(result);
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+searchInput.addEventListener("input", (e) => {
+     filterString.searchItem = e.target.value;
+     renderProducts(products, filterString);
+})
