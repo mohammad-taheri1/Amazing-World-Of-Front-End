@@ -1,37 +1,102 @@
-*{
+* {
+    margin: 0;
     padding: 0;
-    /*margin: 0 ;*/
     box-sizing: border-box;
+    list-style: none;
+}
+:root {
+    --primaryColor: #6d28d9;
+    --secondaryColor: #ede9fe;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #7c7c7c;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+    --mainRed: #db2777;
+    --bodyColor: #f6f6f6;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
+body {
+    font-family: Tahoma, sans-serif;
+    color: var(--mainBlack);
+    background-color: var(--bodyColor);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-.backdrop{
-    background-color: rgba(0,0,0, 0.07);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
+header {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.modal {
-    width: 200px;
-    height: 200px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-    padding: 1rem;
-    border-radius: 5px;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-    transformY: -100vh;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
+.form-container {
+    display: flex;
+}
+
+.todo-container{
+    width: 20rem;
+}
+form {
+    width: 20rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+form input {
+    flex: 1;
+}
+
+form input, form button {
+    border: none;
+    outline: none;
+    background-color: var(--mainWhite);
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+form button {
+    color: var(--primaryColor);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+}
+.todo {
+    background-color: var(--secondaryColor);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin: 0.3rem 0;
+}
+.todo li {
+    flex: 1;
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+
+.todo span {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.fa-trash {
+    color: var(--mainRed);
+}
+.fa-check-circle-o {
+    color: var(--primaryColor);
+}
