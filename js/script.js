@@ -16,16 +16,38 @@
 
 // **********************************************
 
-console.log("start");
+// console.log("start");
+//
+// function loginUser(email, password, callback){
+//     setTimeout(()=>{
+//         callback({ email});
+//     },3000);
+// }
+//
+// function getUserCourses(email, callback){
+//     setTimeout(()=>{
+//          callback(['course 1', 'course 2', 'course 3']);
+//     },3000);
+// }
+//
+// function getCourseDetails(courseId, callback){
+//     setTimeout(()=>{
+//          callback('Course Title is Madmad');
+//     },3000);
+// }
+//
+//
+// loginUser("mamad@hmail.com", 11111,(user)=>{
+//     console.log("data is ready");
+//     getUserCourses(user.email, (courses) => {
+//         console.log(courses);
+//         getCourseDetails(courses[0],(detail) => {
+//             console.log(detail);
+//         });
+//     });
+// });
+//
+// console.log("end");
 
-function loginUser(email, password, callback){
-    setTimeout(()=>{
-        console.log("data is ready");
-        callback({ email});
-    },3000);
-}
-loginUser("mamad@hmail.com", 11111,(user)=>{
-    console.log(user);
-});
 
-console.log("end");
+// **********************************************
