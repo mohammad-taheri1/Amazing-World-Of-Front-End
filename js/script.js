@@ -16,38 +16,53 @@
 
 // **********************************************
 
-// console.log("start");
+console.log("start");
 //
-// function loginUser(email, password, callback){
-//     setTimeout(()=>{
-//         callback({ email});
-//     },3000);
-// }
+function loginUser(email, password) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({email});
+        }, 3000);
+    })
+}
+
 //
-// function getUserCourses(email, callback){
-//     setTimeout(()=>{
-//          callback(['course 1', 'course 2', 'course 3']);
-//     },3000);
-// }
+function getUserCourses(email) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(['course 1', 'course 2', 'course 3']);
+        }, 3000);
+    })
+}
+
 //
-// function getCourseDetails(courseId, callback){
-//     setTimeout(()=>{
-//          callback('Course Title is Madmad');
-//     },3000);
-// }
+function getCourseDetails(courseId) {
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            resolve('Course Title is Madmad');
+        }, 3000);
+    });
+}
+
 //
 //
-// loginUser("mamad@hmail.com", 11111,(user)=>{
-//     console.log("data is ready");
-//     getUserCourses(user.email, (courses) => {
-//         console.log(courses);
-//         getCourseDetails(courses[0],(detail) => {
-//             console.log(detail);
-//         });
-//     });
-// });
+ loginUser("mamad.taheri@gmail.com", 123456789)
+     .then(user => getUserCourses(user.email))
+     .then(courses => getCourseDetails(courses[0]))
+     .then(detail => console.log(detail));
 //
-// console.log("end");
+console.log("end");
 
 
 // **********************************************
+
+// const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         // resolve("successful");
+//         reject(new Error("user not found"));
+//     }, 3000);
+// });
+//
+// promise
+//     .then(data => console.log(data))
+//     .catch(error => console.log(error.message));
