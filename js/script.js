@@ -6,3 +6,9 @@ addBtn.addEventListener("click", (e) => {
         item.remove();
     })
 });
+
+const searchInput = document.querySelector("#search");
+
+searchInput.addEventListener('change', (e)=>{
+    console.log(e.target.value);
+});
