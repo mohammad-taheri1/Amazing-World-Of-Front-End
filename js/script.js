@@ -1,31 +1,17 @@
-const btnS = document.querySelectorAll(".btn");
-const counter = document.querySelector("#counter");
+const showbtn = document.querySelector(".show-modal");
+const modal = document.querySelector(".modal");
+const backDrop = document.querySelector(".backdrop");
+const closebtn = document.querySelector(".close-modal");
 
-let count = 0;
-
-// incBtn.addEventListener("click",()=>{
-//     count++;
-//     counter.textContent = count;
-// });
-//
-// decBtn.addEventListener("click",()=>{
-//     count--;
-//     counter.textContent = count;
-// });
-//
-// resetBtn.addEventListener("click",()=>{
-//     count = 0;
-//     counter.textContent = count;
-// });
-
-btnS.forEach(btn => {
-    btn.addEventListener("click", ()=> {
-        const classes = btn.classList;
-        if(classes.contains("inc")) count++;
-        else if(classes.contains("dec")) count--;
-        else count = 0;
-        counter.textContent = count;
-        if(count > 0) counter.style.color = "blue";
-        else counter.style.color = "red";
-    })
+showbtn.addEventListener("click",()=>{
+    modal.style.opacity = "1";
+    modal.style.transform = "translateY(20vh)"
+    backDrop.style.display = "block";
 })
+
+closebtn.addEventListener("click",()=>{
+    modal.style.opacity = "0";
+    modal.style.transform = "translateY(-100vh)"
+    backDrop.style.display = "none";
+})
+
