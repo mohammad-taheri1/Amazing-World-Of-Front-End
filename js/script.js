@@ -1,25 +1,27 @@
-class Rectangle{
-    constructor(_x,_y,_color) {
-        this.x = _x;
-        this.y = _y;
-        this.color = _color;
+class Person{
+    constructor(_name,_age) {
+        this.name=_name;
+        this.age = _age;
     }
-    get area(){
-        return this.x * this.y;
+    introduce(){
+        console.log(`The Person name is ${this.name} and his/her age is ${this.age}`)
     }
-    set area(a){
-        this.x = Math.sqrt(a);
-        this.y = this.x;
-    }
-    printDescription(){
-        console.log(`this rectangle has ${this.x} width and ${this.y} height`)
-    }
-
 }
 
-const testRectangle1 = new Rectangle(20,25,"blue");
-const testRectangle2 = new Rectangle(35,80,"red");
+class Programmer extends Person{
+    constructor(_name,_age,_experties) {
+        super(_name,_age);
+        this.expertis = _experties;
+    }
+    introduce() {
+        console.log("override")
+    }
 
-console.log(testRectangle1.x);
-testRectangle1.area = 950;
-console.log(testRectangle1.x);
+    code(){
+        console.log(`${this.name} has experty of ${this.expertis}`);
+    }
+}
+
+const person1 = new Person("mamad", 32);
+
+const mamad = new Programmer("mamad", 32, "react Developer")
