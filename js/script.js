@@ -1,19 +1,7 @@
-class Animal{
-    constructor(_name) {
-        this.name = _name;
-    }
-    eats(){
-        console.log(`the ${this.name} eats food`);
-    }
-}
+console.log("start");
 
-class Dog extends Animal{
-    eats() {
-        super.eats();
-        console.log(`overrided function`);
-    }
+setTimeout(()=>{
+    console.log("duration")
+}, 2000);
 
-}
-
-const animal1 = new Dog('animaltest');
-animal1.eats();
+console.log("end");
