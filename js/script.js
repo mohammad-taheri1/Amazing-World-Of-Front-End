@@ -46,23 +46,24 @@ function getCourseDetails(courseId) {
 
 //
 //
- loginUser("mamad.taheri@gmail.com", 123456789)
-     .then(user => getUserCourses(user.email))
-     .then(courses => getCourseDetails(courses[0]))
-     .then(detail => console.log(detail));
+//  loginUser("mamad.taheri@gmail.com", 123456789)
+//      .then(user => getUserCourses(user.email))
+//      .then(courses => getCourseDetails(courses[0]))
+//      .then(detail => console.log(detail));
 //
 console.log("end");
 
+const displayCourseDetail = async () =>{
+   try {
+       const user = await loginUser("mamad.taheri@gmail.com", 1);
+       console.log(user);
+       const courses = await getUserCourses(user.email);
+       console.log(courses);
+       const detail = await getCourseDetails(courses[0]);
+       console.log(detail);
+   } catch (error) {
+       console.log(error)
+   }
+}
 
-// **********************************************
-
-// const promise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         // resolve("successful");
-//         reject(new Error("user not found"));
-//     }, 3000);
-// });
-//
-// promise
-//     .then(data => console.log(data))
-//     .catch(error => console.log(error.message));
+displayCourseDetail();
