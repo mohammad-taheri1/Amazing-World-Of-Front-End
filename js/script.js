@@ -1,69 +1,37 @@
-// console.log("start");
-//
-// setTimeout(()=>{
-//     console.log("2 mili seconds later")
-// }, 2000);
-//
-// setTimeout(()=>{
-//     console.log("1 mili seconds later")
-// }, 1000);
-//
-// setTimeout(()=>{
-//     console.log("0 mili seconds later")
-// }, 0);
-//
-// console.log("end");
+const getBtn = document.querySelector(".get-data");
+const postBtn = document.querySelector(".post-data");
 
-// **********************************************
-
-console.log("start");
-//
-function loginUser(email, password) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve({email});
-        }, 3000);
-    })
+function getData(){
+    // fetch("https://jsonplaceholder.typicode.com/users", {method: "GET"})
+    //     .then(response => {
+    //          return response.json();
+    //     })
+    //     .then(data => console.log(data))
+    axios.get("https://jsonplaceholder.typicode.com/users")
+        .then(response => console.log(response.data));
 }
 
-//
-function getUserCourses(email) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(['course 1', 'course 2', 'course 3']);
-        }, 3000);
-    })
+function postData(){
+    const userData = {
+        id: 1,
+        name: "mamad",
+        username: "mamad@mamad.mamad",
+        email: "mamad@gmail.com",
+    };
+    // fetch("https://jsonplaceholder.typicode.com/users", {
+    //     method: "POST",
+    //     body:JSON.stringify(userData),
+    //     headers: {
+    //             'content-type': 'application/jspn'
+    //         },
+    // })
+    //     .then(response => {
+    //         return response.json();
+    //     })
+    //     .then(data => console.log(data))
+    axios.post("https://jsonplaceholder.typicode.com/users", userData)
+        .then(response => console.log(response.data));
 }
 
-//
-function getCourseDetails(courseId) {
-    return new Promise((resolve, reject)=>{
-        setTimeout(() => {
-            resolve('Course Title is Madmad');
-        }, 3000);
-    });
-}
-
-//
-//
-//  loginUser("mamad.taheri@gmail.com", 123456789)
-//      .then(user => getUserCourses(user.email))
-//      .then(courses => getCourseDetails(courses[0]))
-//      .then(detail => console.log(detail));
-//
-console.log("end");
-
-const displayCourseDetail = async () =>{
-   try {
-       const user = await loginUser("mamad.taheri@gmail.com", 1);
-       console.log(user);
-       const courses = await getUserCourses(user.email);
-       console.log(courses);
-       const detail = await getCourseDetails(courses[0]);
-       console.log(detail);
-   } catch (error) {
-       console.log(error)
-   }
-}
-
-displayCourseDetail();
+getBtn.addEventListener("click",getData);
+postBtn.addEventListener("click", postData);
