@@ -1,37 +1,24 @@
-const getBtn = document.querySelector(".get-data");
-const postBtn = document.querySelector(".post-data");
+let num1 = 5;
+let num2 = num1;
 
-function getData(){
-    // fetch("https://jsonplaceholder.typicode.com/users", {method: "GET"})
-    //     .then(response => {
-    //          return response.json();
-    //     })
-    //     .then(data => console.log(data))
-    axios.get("https://jsonplaceholder.typicode.com/users")
-        .then(response => console.log(response.data));
-}
+num2 = 45;
 
-function postData(){
-    const userData = {
-        id: 1,
-        name: "mamad",
-        username: "mamad@mamad.mamad",
-        email: "mamad@gmail.com",
-    };
-    // fetch("https://jsonplaceholder.typicode.com/users", {
-    //     method: "POST",
-    //     body:JSON.stringify(userData),
-    //     headers: {
-    //             'content-type': 'application/jspn'
-    //         },
-    // })
-    //     .then(response => {
-    //         return response.json();
-    //     })
-    //     .then(data => console.log(data))
-    axios.post("https://jsonplaceholder.typicode.com/users", userData)
-        .then(response => console.log(response.data));
-}
+console.log(num1);
+console.log(num2);
 
-getBtn.addEventListener("click",getData);
-postBtn.addEventListener("click", postData);
+let arr1 = [1, 2, 3];
+let arr2 = arr1;
+
+arr2.push(43);
+
+console.log(arr1);
+console.log(arr2);
+
+let arr3 = [1, 2, 3];
+let arr4 = [...arr3];
+
+arr4.push(43);
+
+console.log(arr3);
+console.log(arr4);
+
