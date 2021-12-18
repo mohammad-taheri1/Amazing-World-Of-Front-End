@@ -1,24 +1,30 @@
-let num1 = 5;
-let num2 = num1;
+// import { name, sayHi } from "./app.js";
 
-num2 = 45;
+// console.log(name);
 
-console.log(num1);
-console.log(num2);
+// sayHi();
 
-let arr1 = [1, 2, 3];
-let arr2 = arr1;
+class Vehicle {
+    constructor(color, model){
+        this.color = color;
+        this.model = model;
+    }
+    spegoed(){
+        console.log(this.model + " goes ");
+    }
+}
 
-arr2.push(43);
+class Car extends Vehicle {
+    constructor(speed, color, model){
+        super(color, model);
+        this.speed = speed;
+    }
 
-console.log(arr1);
-console.log(arr2);
+    speed() {
+        console.log("I go fast")
+    }
+}
 
-let arr3 = [1, 2, 3];
-let arr4 = [...arr3];
+const car1 = new Car(190, "red", "Pride");
 
-arr4.push(43);
-
-console.log(arr3);
-console.log(arr4);
-
+console.log(car1);
