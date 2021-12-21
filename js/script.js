@@ -108,8 +108,26 @@
 //     return b - a
 // }))
 
-let emptyArray = new Array();
-for (let num = 0; num < 10; num++) {
-    emptyArray.push(num);
+// let emptyArray = new Array();
+// for (let num = 0; num < 10; num++) {
+//     emptyArray.push(num);
+// }
+// console.log(emptyArray)
+
+// Objects
+
+let student = {
+    first: 'Mamad',
+    last: 'Taheri',
+    age: 32,
+    heigt: 192
+};
+// console.log(student)
+// console.log(typeof student);
+for(let item in student) {
+    console.log(item, "->" ,student[item])
 }
-console.log(emptyArray)
+console.log(Object.keys(student))
+console.log(Object.values(student))
+
+
