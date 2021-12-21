@@ -116,18 +116,41 @@
 
 // Objects
 
-let student = {
-    first: 'Mamad',
-    last: 'Taheri',
-    age: 32,
-    heigt: 192
-};
-// console.log(student)
-// console.log(typeof student);
-for(let item in student) {
-    console.log(item, "->" ,student[item])
+// let student = {
+//     first: 'Mamad',
+//     last: 'Taheri',
+//     age: 32,
+//     heigt: 192
+// };
+// // console.log(student)
+// // console.log(typeof student);
+// for(let item in student) {
+//     console.log(item, "->" ,student[item])
+// }
+// console.log(Object.keys(student))
+// console.log(Object.values(student))
+
+// Conditional, Control flows
+
+// var age = prompt('what is your age?');
+
+// if((age >=18) && (age <= 35)) {
+//     let status = "Target demo";
+//     console.log(status);
+// } else {
+//     let satatus = "not my audience";
+//     console.log(satatus)
+// }
+
+const day = 0
+
+switch (day) {
+    case 0:
+        console.log("Zero")
+        break;
+    case 4:
+        console.log("four")
+        break;
+    default:
+        break;
 }
-console.log(Object.keys(student))
-console.log(Object.values(student))
-
-
