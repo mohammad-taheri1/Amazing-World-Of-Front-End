@@ -1,0 +1,36 @@
+.container-1, 
+.container-2,
+.container-3 {
+    border: 1px solid black;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flex-box-container-1, 
+.flex-box-container-2,
+.flex-box-rps  {
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flex-box-container-1 div {
+    display: flex;
+    border: 1px solid #cccd43;
+    padding: 10px;
+    align-items: center;
+}
+
+.flex-box-container-2 img {
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 50px rgba(0,0,0,0.7);
+}
+
+.flex-box-rps img:hover {
+    box-shadow: 0px 10px 50px rgba(37,50,233,0.8);
+}
