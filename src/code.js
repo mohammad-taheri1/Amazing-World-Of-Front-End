@@ -1,7 +1,17 @@
 function gte(a,b){
-    if(a>b) return true;
-    if(a<b) return false;
-    if(a==b) return true;
+    return a>=b ? true : false;
 }
 
-module.exports = gte;
+function welcomeMessage(name){
+    return `hello ${name}. welcome to jest tutorial`;
+}
+
+function shoppingList(){
+    return [
+        'peanut',
+        'cake',
+        'milk'
+    ]
+}
+
+module.exports = {gte , welcomeMessage, shoppingList};
