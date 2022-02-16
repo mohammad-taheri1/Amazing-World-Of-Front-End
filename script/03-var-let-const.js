@@ -89,4 +89,14 @@
 
 // console.log("mammad")
 
+// const person = {
+//     name: 'mamad',
+//     family: 'taheri'
+// }
 
+
+// const html ='<ul></ul>' ;
+// html += '<li></li>';
+
+// let html ='<ul></ul>' ;
+// html += '<li></li>';
