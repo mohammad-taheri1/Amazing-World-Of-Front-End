@@ -2,7 +2,7 @@ console.log("1");
 
 function loginUser(email, password, callback){
     setTimeout(() => {
-        console.log("data is fetched from server");
+        console.log("user is fetched from server");
         // return ({userEmail: email})
         //
         callback({userEmail: email});
