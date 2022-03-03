@@ -28,31 +28,53 @@
 
 // ***********************************************
 // آشنایی با کلاسها و وراثت
-class Shape{
-    constructor(_color){
-        console.log("A new Shape Created");
-        this.color=_color;
+// class Shape{
+//     constructor(_color){
+//         console.log("A new Shape Created");
+//         this.color=_color;
+//     }
+// }
+
+// class RectAngle extends Shape{
+//     constructor(_x,_y,_color){
+//         super(_color);
+//         console.log("A new ReactAngle Created");
+//         this.x = _x;
+//         this.y = _y;
+//     }
+
+//     getArea() {
+//         return this.x + this.y
+//     }
+
+//     printDescription(){
+//         console.log(`this rectangle is ${this.x} * ${this.y}`)
+//     }
+// }
+
+// const aaa = new RectAngle(10,20,"black");
+// const bbb = new RectAngle(15,25,"red");
+// console.log(aaa);
+// console.log(bbb);
+
+// ***********************************************
+// Polymorphism -> چند ریختی
+
+class Animal{
+    constructor(name){
+        this.name = name;
+    }
+
+    eats() {
+        console.log(`the ${this.name} eats food`);
     }
 }
 
-class RectAngle extends Shape{
-    constructor(_x,_y,_color){
-        super(_color);
-        console.log("A new ReactAngle Created");
-        this.x = _x;
-        this.y = _y;
-    }
-
-    getArea() {
-        return this.x + this.y
-    }
-
-    printDescription(){
-        console.log(`this rectangle is ${this.x} * ${this.y}`)
+class Dog extends Animal{
+    eats() {
+        console.log(`the ${this.name} eats food in Dog class`);
     }
 }
 
-const aaa = new RectAngle(10,20,"black");
-const bbb = new RectAngle(15,25,"red");
-console.log(aaa);
-console.log(bbb);
+const animal = new Animal("animal");
+const dog1 = new Dog("dog");
