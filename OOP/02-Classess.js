@@ -21,12 +21,29 @@ class User {
 
 }
 
+class Admin extends User{
+    deleteUser(user){
+        users = users.filter(u => {
+            return u.email !== user.email;
+        })
+    }
+}
+
  var userOne = new User('mamad@gmail.com', 'mamad');
  var userTwo = new User('alice@gmail.com', 'alice');
 
-//  userOne.login();
-//  userOne.logout();
-//  userTwo.login();
-//  userTwo.logout();
+ var admin = new Admin('Admin@gmail.com','admin');
 
-userOne.login().updateScore().updateScore().logout();
+ 
+ //  userOne.login();
+ //  userOne.logout();
+ //  userTwo.login();
+ //  userTwo.logout();
+ 
+ // userOne.login().updateScore().updateScore().logout();
+ 
+ let users = [userOne, userTwo, admin];
+ 
+ admin.deleteUser(userTwo);
+
+ console.log(users);
