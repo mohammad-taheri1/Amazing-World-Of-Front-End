@@ -1,6 +1,6 @@
 # JavaScript
 
-everything in JavaScript is an Object!!!!!!
+everything in JavaScript can be some sort of an Object!!!!!!
 
 list of Branches:
 
