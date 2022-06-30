@@ -143,6 +143,13 @@ The HTMLElement interface represents any HTML element. Some elements directly im
 ## every() --------------
 
 ## reduce() --------------
+    items.reduce((prev, next, index, items) => {
+      console.log(next);
+      console.log(items);
+      return (prev + next);
+    }, 0);
+
+
 ## forEach((a,b,c) => {}) --------------
 * Without return
 * It gets 3 input on its function
