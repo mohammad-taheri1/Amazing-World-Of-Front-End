@@ -13,9 +13,13 @@ const myTestPromise = new Promise((resolve, reject) => {
   }
 });
 
-const testFunc = async function test(){
+const testFunc = async function test() {
+  try {
     const data = await myTestPromise;
     console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 testFunc();
