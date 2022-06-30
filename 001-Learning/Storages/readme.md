@@ -14,3 +14,6 @@
 |  Sent with requests  |         Yes        |       No      |        No       |
 |  Blockable by users  |         Yes        |      Yes      |       Yes       |
 |   Editable by users  |         Yes        |      Yes      |       Yes       |
+
+
+<img src="./comparison.png" />
