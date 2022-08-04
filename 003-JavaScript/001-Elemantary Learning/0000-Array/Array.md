@@ -44,3 +44,54 @@
 * Array.prototype.toString() 
 * Array.prototype.unshift() 
 * Array.prototype.values() 
+
+
+
+**************************
+# 002 - Array
+
+## some() --------------
+
+## every() --------------
+
+## reduce() --------------
+    items.reduce((prev, next, index, items) => {
+      console.log(next);
+      console.log(items);
+      return (prev + next);
+    }, 0);
+
+
+## forEach((a,b,c) => {}) --------------
+* Without return
+* It gets 3 input on its function
+
+  * a = every item
+  * b = index
+  * c = Entire Array
+
+* It will invoke the function for every item
+
+## map((a,b,c) => {}) --------------
+* Returns new array
+* It gets 3 input on its function
+
+  * a = every item
+  * b = index
+  * c = Entire Array
+
+* It will invoke the function for every item
+
+## filter((item) => {}) --------------
+* Returns new array
+
+## find((item) => {}) --------------
+* Returns first found item if exists
+
+## findIndex((item) => {}) --------------
+* Returns index of first found item if exists
+
+## slice() --------------
+
+## splice() --------------
+
