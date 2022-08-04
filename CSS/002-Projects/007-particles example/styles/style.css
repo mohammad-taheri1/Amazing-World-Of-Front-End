@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: #123123;
+  overflow: hidden;
+}
+h1 {
+  color: #fff;
+  user-select: none;
+}
+span {
+  position: absolute;
+  background-color: #f00;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  border-radius: 50px;
+}
+span::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: moveParticles 3s linear infinite;
+}
+@keyframes moveParticles {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(300px);
+  }
+}
