@@ -1,97 +1,87 @@
 ## Array
 
-
 `Static methods`
-* Array.isArray() 
-* Array.from() 
-* Array.of() 
+
+- Array.isArray()
+- Array.from()
+- Array.of()
 
 `Instance properties`
-* Array.prototype.length() 
+
+- Array.prototype.length()
 
 `Instance methods`
-* Array.prototype.at() 
-* Array.prototype.concat() 
-* Array.prototype.copyWithin() 
-* Array.prototype.entries() 
-* Array.prototype.every() 
-* Array.prototype.fill() 
-* Array.prototype.filter() 
-* Array.prototype.find() 
-* Array.prototype.findIndex() 
-* Array.prototype.flat() 
-* Array.prototype.flatMap() 
-* Array.prototype.forEach() 
-* Array.prototype.group () 
-* Array.prototype.groupToMap () 
-* Array.prototype.includes() 
-* Array.prototype.indexOf() 
-* Array.prototype.join() 
-* Array.prototype.keys() 
-* Array.prototype.lastIndexOf() 
-* Array.prototype.map() 
-* Array.prototype.pop() 
-* Array.prototype.push()   
-* Array.prototype.reduce() 
-* Array.prototype.redueRight() 
-* Array.prototype.reverse() 
-* Array.prototype.shift() 
-* Array.prototype.slice() 
-* Array.prototype.some() 
-* Array.prototype.sort() 
-* Array.prototype.splice() 
-* Array.prototype.toLocaleString() 
-* Array.prototype.toString() 
-* Array.prototype.unshift() 
-* Array.prototype.values() 
 
+- ## Array.prototype.entries()
+- ## Array.prototype.keys()
+- ## Array.prototype.values()
 
+- ## Array.prototype.pop()
+- ## Array.prototype.push()
+- ## Array.prototype.shift()
+- ## Array.prototype.unshift()
 
-**************************
-# 002 - Array
+- ## Array.prototype.at()
+- ## Array.prototype.concat()
+- ## Array.prototype.copyWithin()
+- ## Array.prototype.every() --------------
+- ## Array.prototype.fill()
+- ## Array.prototype.filter((item) => {}) --------------
 
-## some() --------------
+  - Returns new array
 
-## every() --------------
+- ## Array.prototype.find((item) => {}) --------------
 
-## reduce() --------------
-    items.reduce((prev, next, index, items) => {
-      console.log(next);
-      console.log(items);
-      return (prev + next);
-    }, 0);
+  - Returns first found item if exists
+- ## Array.prototype.findIndex((item) => {}) --------------
 
+  - Returns index of first found item if exists
 
-## forEach((a,b,c) => {}) --------------
-* Without return
-* It gets 3 input on its function
+- ## Array.prototype.flat()
+- ## Array.prototype.flatMap()
+- ## forEach((a,b,c) => {}) --------------
 
-  * a = every item
-  * b = index
-  * c = Entire Array
+  - Without return
+  - It gets 3 input on its function
 
-* It will invoke the function for every item
+    - a = every item
+    - b = index
+    - c = Entire Array
 
-## map((a,b,c) => {}) --------------
-* Returns new array
-* It gets 3 input on its function
+  - It will invoke the function for every item
+- ## Array.prototype.group ()
+- ## Array.prototype.groupToMap ()
+- ## Array.prototype.includes() --------------
+- ## Array.prototype.indexOf() --------------
+- ## Array.prototype.join()
+- ## Array.prototype.lastIndexOf()
+- ## Array.prototype.map((a,b,c) => {}) --------------
 
-  * a = every item
-  * b = index
-  * c = Entire Array
+  - Returns new array
+  - It gets 3 input on its function
 
-* It will invoke the function for every item
+    - a = every item
+    - b = index
+    - c = Entire Array
 
-## filter((item) => {}) --------------
-* Returns new array
+  - It will invoke the function for every item
 
-## find((item) => {}) --------------
-* Returns first found item if exists
+- ## Array.prototype.reduce()
+      items.reduce((prev, next, index, items) => {
+        console.log(next);
+        console.log(items);
+        return (prev + next);
+      }, 0);
+- ## Array.prototype.redueRight()
+- ## Array.prototype.reverse()
+- ## Array.prototype.slice() --------------
+- ## Array.prototype.some() --------------
+- ## Array.prototype.sort()
+- ## Array.prototype.splice() --------------
+  - splice(start)
+  - splice(start, deleteCount)
+  - splice(start, deleteCount, item1)
+  - splice(start, deleteCount, item1, item2, itemN)
 
-## findIndex((item) => {}) --------------
-* Returns index of first found item if exists
-
-## slice() --------------
-
-## splice() --------------
-
+- ## Array.prototype.toLocaleString()
+- ## Array.prototype.toString()
