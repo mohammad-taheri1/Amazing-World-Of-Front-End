@@ -25,7 +25,7 @@ ul {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 46.88%, rgba(0, 0, 0, 0) 100%), url("../images/header-bg.jfif");
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 46.88%, rgba(0, 0, 0, 0) 100%), url("../images/header-bg.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -231,6 +231,7 @@ ul {
 .popular-dishes .popular-dishes__content .popular-dishes__content__image img {
   width: 100%;
   height: auto;
+  border-radius: 12px;
 }
 .popular-dishes .popular-dishes__content .popular-dishes__content__texts {
   flex: 2;
